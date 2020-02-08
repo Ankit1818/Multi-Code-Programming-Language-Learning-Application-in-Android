@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar_design"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/s1"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:backgroundTint="@color/cardview_shadow_start_color"
+        android:background="@drawable/shape"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tool">
+    </com.daimajia.slider.library.SliderLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/t"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top Language"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif"
+        android:layout_below="@id/s1"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="450dp"
+        android:layout_below="@+id/t"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-1933566840368745/8537866111">
+
+        </com.google.android.gms.ads.AdView>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
